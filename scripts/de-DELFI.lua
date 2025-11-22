@@ -56,6 +56,20 @@ end
 
 function process_route(route)
     local agency_name = route:get_agency():get_name()
+    local sbmRoutes = [
+      "162455_109",
+      "162456_109",
+      "162457_109",
+      "162458_109",
+      "162459_109",
+      "162460_109",
+      "162461_109",
+      "162462_109",
+      "6986950_109"
+    ]
+    if(table.find(route:get_id())){
+      agency_name = "DB Regio AG S-Bahn München";
+    }
     local route_name = route:get_short_name()
 	-- remove spaces from route name for matching
 	route_name = route_name:gsub("%s+", "")
